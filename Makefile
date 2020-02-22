@@ -1,13 +1,8 @@
 .PHONY: test
 
 deps:
-	sudo pip install virtualenv \
-	sudo pip install virtualenvwrapper \
-	source /usr/local/bin/virtualenvwrapper.sh \
-	mkvirtualenv wsb-simple-flask-app \
 	pip install -r requirements.txt \
-	pip install -r test_requirements.txt \
-	source /usr/local/bin/virtualenvwrapper.sh
+	pip install -r test_requirements.txt
 
 lint:
 	flake8 hello_world test
