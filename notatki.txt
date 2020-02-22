@@ -1,0 +1,28 @@
+22.02.2020
+
+Continuous Delivery
+
+App
+1. Uruchamiamy testy
+
+
+Git hub + travisCI
+1. linter (statyczna analiza kodu)
+2. testy
+3. pakiety -> do repozytorium (docker)
+
+
+GIT
+1. git add -u => zmodyfikowane
+2.
+
+
+reStructuredText vs Markdown for documentation
+flask
+Makefile (do kompilacji programow)
+
+pep8 (standard kodowania)
+linia kodau #noqa -> skipiuje
+
+docker
+docker hub
