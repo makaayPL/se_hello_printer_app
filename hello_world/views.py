@@ -13,8 +13,8 @@ def index():
     name = request.args.get('name')
     if not output:
         output = PLAIN
-    elif not name:
-        name = PLAIN
+    if not name:
+        name = moje_imie
     return get_formatted(msg, name.lower(),
                          output.lower())
 
