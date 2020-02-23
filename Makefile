@@ -1,7 +1,8 @@
 .PHONY: test
 
+SERVICE_NAME=hello-world-printer
 USERNAME=marcintester
-TAG=$(USERNAME)/hello-world-printer
+TAG=$(USERNAME)/$(SERVICE_NAME)
 
 deps:
 	pip install -r requirements.txt; \
@@ -17,23 +18,22 @@ run-server:
 	python main.py
 
 start:
-	source /usr/local/bin/virtualenvwrapper.sh \
-	PYTHONPATH=. workon wsb-simple-flask-app
+	source /usr/local/bin/virtualenvwrapper.sh && PYTHONPATH=. workon wsb-simple-flask-app
 
 stop:
 	deactivate
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t $(SERVICE_NAME) .
 
 docker_run: docker_build
 	docker run \
-	--name hello-world-printer-dev \
+	--name $(SERVICE_NAME)-dev \
 	-p 5000:5000 \
-	-d hello-world-printer
+	-d $(SERVICE_NAME)
 
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
-	docker tag hello-world-printer $(TAG); \
+	docker tag $(SERVICE_NAME) $(TAG); \
 	docker push $(TAG); \
 	docker logout;
