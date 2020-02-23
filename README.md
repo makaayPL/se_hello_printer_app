@@ -1,4 +1,5 @@
 # Simple Flask App
+[![Build Status](https://travis-ci.com/makaayPL/se_hello_printer_app.svg?branch=master)](https://travis-ci.com/makaayPL/se_hello_printer_app)
 
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
@@ -6,9 +7,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 - Rozpoczynając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedynczej aplikacji w python-ie:
 
   ```
-  # centos, add to ~/.bashrc
-  $ source /usr/bin/virtualenvwrapper.sh
-
   # ubuntu, add to ~/.bashrc
   $ source /usr/local/bin/virtualenvwrapper.sh
 
@@ -16,6 +14,9 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ mkvirtualenv wsb-simple-flask-app
   $ pip install -r requirements.txt
   $ pip install -r test_requirements.txt
+
+  albo:
+  make deps
   ```
 
   Sprawdź: [documentację virtualenvwrappera](https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html)s oraz [biblioteki flask](http://flask.pocoo.org).
@@ -68,17 +69,6 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
 
 - Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-## Centos
-
-- Instalacja python virtualenv i virtualenvwrapper:
-
-  ```
-  $ yum install -y python-pip
-  $ pip install -U pip
-  $ pip install virtualenv
-  $ pip install virtualenvwrapper
-  ```
 
 - Instalacja docker-a:
 

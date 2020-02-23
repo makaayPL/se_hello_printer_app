@@ -14,6 +14,7 @@ run-server:
 	python main.py
 
 start:
+	source /usr/local/bin/virtualenvwrapper.sh \
 	PYTHONPATH=. workon wsb-simple-flask-app
 
 stop:
